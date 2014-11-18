@@ -12,7 +12,7 @@
   <hr />
 
   <form name="myForm">
-    <input  name="ngField" ng-model="field" required minlength="5" />
+    <input  name="myField" ng-model="field" required minlength="5" />
     <div ng-messages="myForm.myField.$error" ng-messages-multiple >
       <div ng-message="required">Required to enter</div>
       <div ng-message="minlength">Input is too short</div>
@@ -21,3 +21,7 @@
   </form>
 </body>
 </html>
+
+
+<!-- this is a test program for v1.3 angular messages -->
+<!-- ng messages-multiple on form seems to not be working -->
