@@ -11,7 +11,13 @@
   <h2>Angular Messages with a Form</h2>
   <hr />
 
-
-
+  <form name="myForm">
+    <input  name="ngField" ng-model="field" required minlength="5" />
+    <div ng-messages="myForm.myField.$error" ng-messages-multiple >
+      <div ng-message="required">Required to enter</div>
+      <div ng-message="minlength">Input is too short</div>
+      <div ng-message="email">Email address only</div>
+    </div>
+  </form>
 </body>
 </html>
