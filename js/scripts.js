@@ -1,4 +1,4 @@
-var app = angular.module('app',[ngMessages]);
+var app = angular.module('app',['ngMessages']);
 
 app.controller('MainCtrl',function MainCtrl() {
   'use strict';
