@@ -3,18 +3,20 @@
 <head>
   <title>Angular playground</title>
   <link rel="stylesheet" href="css/foundation.min.css">
-  <script src="js/angular.js"></script>
-  <script src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/angular.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
 
-<div ng-app="">
-  <input type="text" ng-model="data.message">
-  <h2>{{data.message}}</h2>
-  <div class="{{data.message}}">
-    Wrap me with a foundation component
+<div ng-app="app">
+  <div ng-controller="FirstCtrl">
+      <h2>{{data.message}}</h2>
+      <div class="{{data.message}}">
+        Wrap me with a foundation component
+      </div>
   </div>
 </div>
+
 
 </body>
 </html>
