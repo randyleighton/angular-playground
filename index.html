@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Angular playground</title>
-<script src="js/angular.js"></script>
-<script src="js/angular-messages.js"></script>
-<script src="js/scripts.js"></script>
+  <title>AngularJS Structures</title>
+  <link rel="stylesheet" href="css/foundation.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
 </head>
-<body ng-app="app" ng-controller="MainCtrl as vm">
-  <h1>Angular {{vm.AngularVersion}}</h1>
-  <h2>Angular Messages with a Form</h2>
-  <hr />
+<body>
 
-  <form name="myForm">
-    <input  name="myField" ng-model="field" required minlength="5" />
-    <div ng-messages="myForm.myField.$error" ng-messages-multiple >
-      <div ng-message="required">Required to enter</div>
-      <div ng-message="minlength">Input is too short</div>
-      <div ng-message="email">Email address only</div>
+  <div ng-app="myApp">
+    <div ng-controller="FirstCtrl">
+      <input type="text" ng-model="data.message">
+      <h1>{{data.message}} from controller1</h1>
     </div>
-  </form>
+
+    <div ng-controller="SecondCtrl">
+      <input type="text" ng-model="data.message">
+      <h1>{{data.message}} from controller2</h1>
+    </div>
+  </div>
+
 </body>
 </html>
-
-
-
-
-<!-- this is a test program for v1.3 angular messages -->
-<!-- ng messages-multiple on form seems to not be working -->
